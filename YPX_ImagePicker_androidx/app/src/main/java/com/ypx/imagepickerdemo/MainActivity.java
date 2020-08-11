@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityView.
                 .setLastImageList(isCheckLastImageList ? resultList : null)
                 //设置需要屏蔽掉的图片列表，下次选择时已屏蔽的文件不可选择
                 .setShieldList(isCheckShieldList ? resultList : null)
+                .setLandscapeMode(true)
                 .pick(this, new OnImagePickCompleteListener2() {
                     @Override
                     public void onPickFailed(PickerError error) {

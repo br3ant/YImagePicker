@@ -17,6 +17,7 @@ public class MultiSelectConfig extends CropConfig {
     private boolean isCanEditPic;
     private boolean isCanPreviewVideo = true;
     private boolean isPreview = true;
+    private boolean isLandscape = false;
 
     private int selectMode = SelectMode.MODE_MULTI;
     private ArrayList<ImageItem> lastImageList = new ArrayList<>();
@@ -86,5 +87,13 @@ public class MultiSelectConfig extends CropConfig {
 
     public void setCanPreviewVideo(boolean canPreviewVideo) {
         isCanPreviewVideo = canPreviewVideo;
+    }
+
+    public boolean isLandscape() {
+        return isLandscape;
+    }
+
+    public void setLandscape(boolean landscape) {
+        isLandscape = landscape;
     }
 }

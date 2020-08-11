@@ -26,7 +26,7 @@
             android:name=".activity.preview.MultiImagePreviewActivity"
             android:multiprocess="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="behind"/>
 
         <activity
             android:name=".activity.singlecrop.SingleCropActivity"

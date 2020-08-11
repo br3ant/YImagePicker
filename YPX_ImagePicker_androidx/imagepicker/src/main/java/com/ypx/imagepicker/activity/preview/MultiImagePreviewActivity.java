@@ -3,6 +3,7 @@ package com.ypx.imagepicker.activity.preview;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -116,6 +117,9 @@ public class MultiImagePreviewActivity extends FragmentActivity implements Media
         if (isIntentDataFailed()) {
             finish();
             return;
+        }
+        if (selectConfig.isLandscape()) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
         PickerActivityManager.addActivity(this);
         setContentView(R.layout.picker_activity_preview);

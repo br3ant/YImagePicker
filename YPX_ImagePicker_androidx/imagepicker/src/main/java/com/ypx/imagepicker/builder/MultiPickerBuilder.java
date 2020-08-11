@@ -219,7 +219,16 @@ public class MultiPickerBuilder {
     }
 
     /**
-     * @param imageList 设置上一次选择的媒体文件，默认还原上一次选择，可取消
+     * @param isLandscape 横屏模式
+     * @param <T>         String or ImageItem
+     */
+    public <T> MultiPickerBuilder setLandscapeMode(Boolean isLandscape) {
+        selectConfig.setLandscape(isLandscape);
+        return this;
+    }
+
+    /**
+     * @param imageList 设置是否为横屏模式
      * @param <T>       String or ImageItem
      */
     public <T> MultiPickerBuilder setLastImageList(ArrayList<T> imageList) {
